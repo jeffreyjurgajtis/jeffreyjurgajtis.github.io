@@ -1,0 +1,74 @@
+---
+layout: default
+---
+
+<div class="container" id="main">
+  <div class="block main">
+    <div class="avatar"></div>
+    <h1>
+      I'm Jeffrey Jurgajtis
+      <span class="ampersand">&amp;</span>
+      I'm a software developer.
+    </h1>
+
+    <div class="grid">
+      <div class="unit span-grid">
+        <p>I enjoy solving business problems with software and learning about new web technologies. I work at <a href="http://www.grok-interactive.com">Grok Interactive</a> developing web applications using Ruby, Rails and JavaScript.</p>
+      </div>
+
+      <div class="unit span-grid contact-icons">
+        <a href="mailto:jeffreyjurgajtis@gmail.com">
+          <i class="typcn typcn-mail"></i>
+        </a>
+        <a href="https://github.com/jeffreyjurgajtis">
+          <i class="typcn typcn-social-github"></i>
+        </a>
+        <a href="http://www.linkedin.com/pub/jeffrey-jurgajtis/58/695/aa7">
+          <i class="typcn typcn-social-linkedin"></i>
+        </a>
+        <a href="https://twitter.com/jeffjurgajtis">
+          <i class="typcn typcn-social-twitter"></i>
+        </a>
+      </div>
+
+      <div class="unit span-grid resume">
+        <a href="assets/jeffrey-jurgajtis.pdf" download="jeffrey-jurgajtis.pdf">r&eacute;sum&eacute; (pdf)</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-scroll">
+    <p>Articles</p>
+    <a href="#articles">
+      <i class="typcn typcn-arrow-sorted-down"></i>
+    </a>
+  </div>
+</div>
+
+<div class="container" id="post-index">
+  <div class="block post-index">
+    <div class="unit span-grid">
+      <h2 class="white" id="articles">Articles</h2>
+
+      {% for post in site.posts %}
+        <div href="{{ post.url }}" class="post-preview">
+          <h3>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          </h3>
+          <p class="date">{{ post.date | date: "%B %-d %Y" }}</p>
+          {{ post.excerpt }}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+<div>
+
+<script>
+  $('.page-scroll a').click(function(e){
+    e.preventDefault();
+
+    $('html, body').animate({
+      scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+  });
+</script>
