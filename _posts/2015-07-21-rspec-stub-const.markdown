@@ -5,9 +5,15 @@ date:   2015-07-20 21:11:09
 author: "Jeffrey Jurgajtis"
 ---
 
+RSpec (2.11+) provides `stub_const` for the purpose of stubbing constants. This
+method is not new and chances are you've seen it before. However, recently I've
+been paying more attention to stubbing dependencies that shouldn't have an
+affect on the outcome of my tests. I'll give a quick example of how
+`stub_const` has helped.
+
 I was recently working on a Rails application that allowed users to read and 
-write reviews for local businesses and service providers. I began on a task to
-prevent users from editing reviews that were older than 90 days.
+write reviews for local businesses. I began on a task to prevent users from
+editing reviews that were older than 90 days.
 
 I started with a few tests to add an instance method to `Review` to determine
 if a review was within the edit period.
@@ -57,8 +63,9 @@ If the client wanted to change the edit period to something else, such as 30
 days, updating `EDIT_PERIOD_IN_DAYS` would cause the tests to fail. However,
 `.within_edit_period?` would still work as expected.
 
-RSpec (2.11+) provides `stub_const` for the purpose of stubbing constants
-already defined.
+I used `stub_const` to replace the original value of `EDIT_PERIOD_IN_DAYS` for
+the duration of the tests. With this addition, no time will be spent updating
+tests in the future should the edit period change for reviews.
 
 {% highlight ruby %}
 # review_spec.rb
@@ -76,6 +83,3 @@ describe "#within_edit_period?" do
 end
 
 {% endhighlight %}
-
-With this addition, no time will be spent updating tests in the future
-should the edit period change for reviews.
