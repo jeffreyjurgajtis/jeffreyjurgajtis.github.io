@@ -88,15 +88,11 @@ body, html {
 }
 
 .block {
-  max-width: 966px;
   margin: 0 auto;
+  max-width: 760px;
   
   &.main {
     top: 22%;
-  }
-
-  &.post, &.post-index {
-    max-width: 720px;
   }
 }
 
@@ -166,13 +162,11 @@ p, ul, ol, hr, table, form, pre, h1, h2, h3 {
 h1 {
 	font-size: 38px;
 	line-height: 1;
-  text-align: center;
 }
 
 h2 {
 	font-size: 35px;
 	line-height: 1;
-  text-align: center;
  
   &.white {
     color: $white;
@@ -326,7 +320,6 @@ div#post {
 
   h1.post-title {
     color: $primary;
-    text-align: left;
     padding-left: 0;
   }
 
@@ -406,6 +399,10 @@ header.site-header {
 
   h1 {
     font-size: 27px !important;
+
+    &.intro {
+      text-align: center;
+    }
 
     span.ampersand {
       display: block;
