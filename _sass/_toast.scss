@@ -2,11 +2,13 @@
 	$VARIABLES
 \*-----------------------------------*/
 
-$blue: #498EE0;
+$blue: #3F6CA2;
 $grey: #787f8c;
 $light-grey: #ECECEC;
+$dark-grey: #505050;
 $green: #5cc1af;
 $white: #FFF;
+$black: #000;
 $soft-white: rgba(255, 255, 255, 0.7);
 $primary: $blue;
 
@@ -147,7 +149,7 @@ body, html {
 	$TYPE
 \*-----------------------------------*/
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,600);
 @import url(http://fonts.googleapis.com/css?family=Playfair+Display);
 
 p, ul, ol, hr, table, form, pre, h1, h2, h3 {
@@ -189,6 +191,21 @@ a {
   &:hover {
     color: $primary;
   }
+}
+
+ul, ol {
+  margin-left: 0;
+  padding-left: 0;
+
+  li {
+    font-size: 18px;
+    color: $dark-grey;
+    line-height: 30px;
+  }
+}
+
+strong {
+  font-weight: 600;
 }
 
 @media only screen and (max-width: 767px) {
@@ -318,14 +335,20 @@ div#post {
     border-bottom: 1px solid $light-grey;
   }
 
+  h1, h2, h3, h4, p {
+    padding-left: 0;
+  }
+
   h1.post-title {
     color: $primary;
-    padding-left: 0;
+  }
+
+  h2, h3 {
+    color: $black;
   }
 
   p.post-meta {
     font-size: 15px;
-    padding-left: 0;
   }
 
   article.post-content {
@@ -333,8 +356,7 @@ div#post {
 
     p {
       padding-right: 0;
-      padding-left: 0;
-      color: #505050;
+      color: $dark-grey;
       line-height: 30px;
       font-size: 18px;
     }
