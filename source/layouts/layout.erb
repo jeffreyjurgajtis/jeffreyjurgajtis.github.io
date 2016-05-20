@@ -8,9 +8,7 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Middleman" %></title>
 
-    <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
-
-    <%= stylesheet_link_tag :site %>
+    <%= stylesheet_link_tag "site", "typicons.min" %>
     <%= javascript_include_tag :all %>
   </head>
 

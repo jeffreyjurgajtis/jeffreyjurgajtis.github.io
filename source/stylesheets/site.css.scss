@@ -1,67 +1,92 @@
 @charset "utf-8";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400);
 @import "normalize";
 
+$font-family: 'Open Sans', sans-serif;
+$font-weight: 400;
+$light-font-weight: 300;
+
+$grey: #888;
+$blue: #4098ff;
+$blue-faint: #7ab7ff;
+$white: #FFF;
+
+@mixin border-radius($radius: 2px) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 body {
-  background: #ECC561;
-  text-align: center;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: $white;
+  font-family: $font-family;
+  font-weight: $font-weight;
   font-size: 1em;
 }
 
-.logo img {
-  height: 18.75em;
-  margin-top: 6em;
+.container {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 20px;
+
+  /* fade in */
+  opacity: 0;
+  animation: fadeIn ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 0.3s;
+  animation-delay: 0.3s;
 }
 
-h1 {
-  color: rgba(0,0,0,0.5);
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.8em;
-  font-weight: 400;
-  margin: 0;
+.h1 {
+  color: $blue;
+  font-size: 2.2em;
+  margin: 150px 0 30px 0;
 }
 
-.doc {
-  margin: 3em 0;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.1em;
-  font-weight: 300;
+.p {
+  color: $grey;
+  line-height: 1.7em;
+  font-weight: $light-font-weight;
 
-  a {
-    border: 1px solid white;
-    border-radius: 3px;
-    padding: 0.75em 0.7em;
-    color: white;
-    text-decoration: none;
-    transition: color 0.1s linear;
+  &.p--space-bottom {
+    margin-bottom: 30px;
+  }
+}
+
+.button {
+  @include border-radius;
+  padding: 10px 22px;
+  background-color: $blue;
+  color: $white;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $blue-faint;
+  }
+}
+
+.contact {
+  margin-top: 30px;
+}
+
+.contact__icon-a {
+  text-decoration: none;
+
+  i {
+    color: $blue;
+    font-size: 2em;
+    transition: color 0.3s ease;
+
     &:hover {
-      background: rgba(0,0,0,0.2);
-      color: white;
-      transition: all 0.15s linear;
+      color: $blue-faint;
     }
-  }
-}
-
-.welcome {
-  -webkit-animation-name: welcome;
-  -webkit-animation-duration: .9s;
-}
-
-@-webkit-keyframes welcome {
-  from {
-    -webkit-transform: scale(0);
-    opacity: 0;
-  }
-  50% {
-   -webkit-transform: scale(0);
-   opacity: 0;
-  }
-  82.5% {
-    -webkit-transform: scale(1.03);
-    -webkit-animation-timing-function: ease-out;
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: scale(1);
   }
 }
