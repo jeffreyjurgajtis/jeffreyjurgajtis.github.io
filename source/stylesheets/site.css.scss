@@ -60,6 +60,16 @@ body {
   }
 }
 
+.a {
+  color: $blue;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $blue-faint;
+  }
+}
+
 .button {
   @include border-radius;
   padding: 10px 22px;
