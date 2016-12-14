@@ -10,6 +10,7 @@ $grey: #888;
 $blue: #4098ff;
 $blue-faint: #7ab7ff;
 $white: #FFF;
+$black: #5C5C5C;
 
 @mixin border-radius($radius: 2px) {
   border-radius: $radius;
@@ -47,16 +48,59 @@ body {
 .h1 {
   color: $blue;
   font-size: 2.2em;
-  margin: 150px 0 30px 0;
+  margin: 100px 0 15px 0;
+
+  &.h1--space-bottom {
+    margin-bottom: 30px;
+  }
+
+  &.h1--space-top {
+    margin-top: 150px;
+  }
+
+  &.h1--centered {
+    text-align: center;
+  }
+
+  &.h1--black {
+    color: $black;
+  }
+}
+
+.h2 {
+  color: $blue;
+  font-size: 1.5em;
+  margin: 0 0 20px;
+
+  &.h2--black {
+    color: $black;
+  }
 }
 
 .p {
   color: $grey;
   line-height: 1.7em;
   font-weight: $light-font-weight;
+  margin: 0;
 
   &.p--space-bottom {
     margin-bottom: 30px;
+  }
+
+  &.p--space-bottom-light {
+    margin-bottom: 15px;
+  }
+
+  &.p--centered {
+    text-align: center;
+  }
+
+  &.p--black {
+    color: $black;
+  }
+
+  &.p--bold {
+    font-weight: $font-weight;
   }
 }
 
@@ -64,9 +108,19 @@ body {
   color: $blue;
   text-decoration: none;
   transition: color 0.3s ease;
+  font-weight: $light-font-weight;
 
   &:hover {
     color: $blue-faint;
+  }
+
+  &.a--black {
+    color: $black;
+    text-decoration: underline;
+
+    &:hover {
+      color: lighten($black, 30%);
+    }
   }
 }
 
