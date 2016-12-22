@@ -396,7 +396,7 @@ body {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-  border: 2px solid #BBB;
+  border: 1px solid #CCC;
   margin: 125px 0 0;
   width: 110px;
   height: 110px;
