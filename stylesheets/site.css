@@ -387,14 +387,31 @@ body {
   animation-duration: 0.3s;
   animation-delay: 0.3s; }
 
+.avatar {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: 2px solid #BBB;
+  margin: 125px 0 0;
+  width: 110px;
+  height: 110px;
+  background-image: url("../images/avatar.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
 .h1 {
   color: #4098ff;
   font-size: 2.2em;
-  margin: 100px 0 15px 0; }
+  margin: 20px 0 15px 0; }
   .h1.h1--space-bottom {
     margin-bottom: 30px; }
   .h1.h1--space-top {
-    margin-top: 150px; }
+    margin-top: 100px; }
   .h1.h1--centered {
     text-align: center; }
   .h1.h1--black {
@@ -416,6 +433,8 @@ body {
     margin-bottom: 30px; }
   .p.p--space-bottom-light {
     margin-bottom: 15px; }
+  .p.p--space-top {
+    margin-top: 30px; }
   .p.p--centered {
     text-align: center; }
   .p.p--black {
@@ -461,3 +480,10 @@ body {
     transition: color 0.3s ease; }
     .contact__icon-a i:hover {
       color: #7ab7ff; }
+
+.hr {
+  margin-top: 30px;
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
