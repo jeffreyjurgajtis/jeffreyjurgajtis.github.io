@@ -375,6 +375,10 @@ body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 1em; }
+  body.index {
+    background: #eeeef0;
+    border-top: 2px solid #2cc9b2;
+    text-align: center; }
 
 .container {
   margin: 0 auto;
@@ -396,16 +400,15 @@ body {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-  border: 1px solid #CCC;
-  margin: 125px 0 0;
-  width: 110px;
-  height: 110px;
-  background-image: url("../images/avatar.jpg");
+  margin: 125px auto 0;
+  width: 125px;
+  height: 125px;
+  background-image: url("../images/avatar-2.jpg");
   background-repeat: no-repeat;
   background-size: cover; }
 
 .h1 {
-  color: #4098ff;
+  color: #5C5C5C;
   font-size: 2.2em;
   margin: 20px 0 15px 0; }
   .h1.h1--space-bottom {
@@ -414,15 +417,13 @@ body {
     margin-top: 100px; }
   .h1.h1--centered {
     text-align: center; }
-  .h1.h1--black {
-    color: #5C5C5C; }
+  .h1.h1--green {
+    color: #2cc9b2; }
 
 .h2 {
-  color: #4098ff;
+  color: #5C5C5C;
   font-size: 1.5em;
   margin: 0 0 20px; }
-  .h2.h2--black {
-    color: #5C5C5C; }
 
 .p {
   color: #888;
@@ -475,11 +476,11 @@ body {
 .contact__icon-a {
   text-decoration: none; }
   .contact__icon-a i {
-    color: #4098ff;
+    color: #5C5C5C;
     font-size: 2em;
     transition: color 0.3s ease; }
     .contact__icon-a i:hover {
-      color: #7ab7ff; }
+      color: darkgray; }
 
 .hr {
   margin-top: 30px;
