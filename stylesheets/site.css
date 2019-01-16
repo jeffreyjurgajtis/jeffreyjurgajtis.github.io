@@ -377,7 +377,7 @@ body {
   font-size: 1em; }
   body.index {
     background: #eeeef0;
-    border-top: 2px solid #2cc9b2;
+    border-top: 2px solid #439aea;
     text-align: center; }
 
 .container {
@@ -401,9 +401,9 @@ body {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   margin: 125px auto 0;
-  width: 125px;
-  height: 125px;
-  background-image: url("../images/avatar-2.jpg");
+  width: 145px;
+  height: 145px;
+  background-image: url("../images/avatar-3.jpg");
   background-repeat: no-repeat;
   background-size: cover; }
 
@@ -417,8 +417,8 @@ body {
     margin-top: 100px; }
   .h1.h1--centered {
     text-align: center; }
-  .h1.h1--green {
-    color: #2cc9b2; }
+  .h1.h1--blue {
+    color: #439aea; }
 
 .h2 {
   color: #5C5C5C;
