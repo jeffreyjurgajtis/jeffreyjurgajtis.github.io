@@ -401,8 +401,8 @@ body {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   margin: 125px auto 0;
-  width: 145px;
-  height: 145px;
+  width: 165px;
+  height: 165px;
   background-image: url("../images/avatar-3.jpg");
   background-repeat: no-repeat;
   background-size: cover; }
@@ -422,7 +422,7 @@ body {
 
 .h2 {
   color: #5C5C5C;
-  font-size: 1.5em;
+  font-size: 1.7em;
   margin: 0 0 20px; }
 
 .p {
@@ -434,6 +434,8 @@ body {
     margin-bottom: 30px; }
   .p.p--space-bottom-light {
     margin-bottom: 15px; }
+  .p.p--space-bottom-heavy {
+    margin-bottom: 45px; }
   .p.p--space-top {
     margin-top: 30px; }
   .p.p--centered {
@@ -442,16 +444,29 @@ body {
     color: #5C5C5C; }
   .p.p--bold {
     font-weight: 400; }
+  .p.p--experience-company a {
+    font-weight: 700;
+    font-size: 1.2em;
+    color: #5C5C5C; }
+  .p.p--experience-title {
+    font-weight: 400;
+    color: #5C5C5C; }
+  .p.p--experience-timeframe {
+    font-weight: 300;
+    font-size: 0.7em;
+    color: #5C5C5C; }
 
 .a {
   color: #4098ff;
   text-decoration: none;
   transition: color 0.3s ease;
   font-weight: 300; }
+  .a.a--bold {
+    font-weight: 400; }
   .a:hover {
     color: #7ab7ff; }
   .a.a--black {
-    color: #5C5C5C;
+    color: #888;
     text-decoration: underline; }
     .a.a--black:hover {
       color: darkgray; }
@@ -488,3 +503,10 @@ body {
   height: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+
+.ul {
+  color: #5C5C5C;
+  line-height: 1.7em;
+  font-weight: 300; }
+  .ul.ul--space-bottom {
+    margin-bottom: 30px; }
